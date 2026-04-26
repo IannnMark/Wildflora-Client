@@ -9,7 +9,7 @@ export default function Banner() {
         alt="Homepage banner"
         width={1920}
         height={689}
-        className="w-full md:w-full h-[689px] object-cover"
+        className="w-full h-[689px] object-cover"
         quality={100}
         priority
       />
