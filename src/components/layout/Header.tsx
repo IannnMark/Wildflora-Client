@@ -4,6 +4,14 @@ import Image from "next/image";
 import { Menu, Search, User } from "lucide-react";
 
 export default function Header() {
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Journal", href: "/community" },
+    { name: "Community", href: "/contact" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
     <div className="bg-[#FEFCEB] h-[57px] sm:h-[104px] w-full">
       <div className="flex items-center justify-between px-8 md:px-16 h-full cursor-pointer">
@@ -18,22 +26,14 @@ export default function Header() {
         </Link>
         <nav className="hidden lg:block w-[656px] h-[24px]">
           <ul className="flex justify-between gap-10 font-medium text-base font-satoshi text-[#1E1E1E]">
-            <li className="hover:scale-105 transition-all duration-300">
-              Home
-            </li>
-            <li className="hover:scale-105 transition-all duration-300">
-              About
-            </li>
-            <li className="hover:scale-105 transition-all duration-300">
-              Journal
-            </li>
-            <li className="transition-all duration-300">Plan Library</li>
-            <li className="hover:scale-105 transition-all duration-300">
-              Community
-            </li>
-            <li className="hover:scale-105 transition-all duration-300">
-              Contact
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.name} className="relative group">
+                <Link href={link.href} className="pb-1">
+                  {link.name}{" "}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className="flex items-center justify-between gap-5">
