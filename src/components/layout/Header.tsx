@@ -15,8 +15,8 @@ export default function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Journal", href: "/community" },
-    { name: "Community", href: "/contact" },
+    { name: "Journal", href: "/journal" },
+    { name: "Community", href: "/community" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -56,10 +56,13 @@ export default function Header() {
                   key={link.name}
                   className="relative group hover:text-[#722F37]"
                 >
-                  <Link href={link.href} className="pb-1">
+                  <Link
+                    href={link.href}
+                    className={`pb-1 ${isActive ? "text-[#722f37] underline" : "text-black"}`}
+                  >
                     {link.name}{" "}
                     <span
-                      className={`absolute left-0 bottom-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full ${isActive ? "text-[#722f37] underline" : "text-black"}`}
+                      className={`absolute left-0 bottom-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full`}
                     ></span>
                   </Link>
                 </li>
