@@ -23,7 +23,7 @@ export default function Header() {
   const openMenu = () => {
     setIsMenuOpen(true);
     requestAnimationFrame(() => {
-      drawerRef.current?.style.setProperty("transform", "translateX(0");
+      drawerRef.current?.style.setProperty("transform", "translateX(0)");
       backdropRef.current?.style.setProperty("opacity", "1");
     });
   };
