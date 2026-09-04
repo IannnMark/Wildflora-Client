@@ -1,36 +1,44 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <div className="relative mt-10 flex items-center justify-center">
-      <div className="pt-6 pb-6 pl-4 pr-4 md:p-6 lg:p-10">
+    <section
+      aria-labelledby="about-heading"
+      className="relative mt-10 flex items-center justify-center"
+    >
+      <div className="px-4 py-6 md:p-6 lg:p-10">
         <Image
-          src={"/images/AboutSection.png"}
-          alt="About images"
+          src="/images/AboutSection.png"
+          alt=""
           width={1328}
           height={715}
-          className="lg:h-[715px] lg:w-[1328px] object-cover md:w-[688px] md:h-[779px] w-[295px] h-[639px] rounded-[10px]"
-          quality={100}
-          priority
+          sizes="(min-width: 1024px) 1328px, (min-width: 768px) 688px, 295px"
+          className="h-[639px] w-[295px] rounded-[10px] object-cover md:h-[779px] md:w-[688px] lg:h-[715px] lg:w-[1328px]"
+          quality={90}
         />
       </div>
 
-      <div className="absolute bg-[#FEFCEB] lg:w-[552px] lg:h-[637px] md:w-[640px] md:h-[310px] w-[263px] h-[354px] rounded-xl lg:left-28 lg:bottom-20 bottom-12 flex flex-col justify-center">
-        <h1 className="font-gabriela font-normal md:text-[48px] text-[32px] text-black text-start md:pl-10 pl-8 leading-[1.1]">
+      <div className="absolute bottom-12 flex h-[354px] w-[263px] flex-col justify-center rounded-xl bg-cream pl-8 md:h-[310px] md:w-[640px] md:pl-10 lg:bottom-20 lg:left-28 lg:h-[637px] lg:w-[552px]">
+        <h2
+          id="about-heading"
+          className="font-gabriela text-[32px] font-normal leading-[1.1] text-black md:text-[48px]"
+        >
           From One Plant <br className="hidden md:block" /> Lover to Another
-        </h1>
-        <p className="font-satoshi font-normal text-[16px] text-black text-start md:pl-10 pl-8 leading-6 mt-2">
-          Wildfora is a gentle space built for home{" "}
+        </h2>
+        <p className="mt-2 font-satoshi text-[16px] font-normal leading-6 text-black">
+          Wildflora is a gentle space built for home{" "}
           <br className="hidden md:block" /> gardeners, botanists, and everyday
           nature lovers.
         </p>
 
-        <div className="md:pl-10 pl-8">
-          <button className="rounded-full text-[16px] font-gabriela bg-[#59663A] w-[210px] h-[47px] text-white mt-5">
-            Learn More About Us
-          </button>
-        </div>
+        <Link
+          href="/about"
+          className="mt-5 inline-flex h-[47px] w-[210px] items-center justify-center rounded-full bg-olive font-gabriela text-[16px] text-white transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Learn More About Us
+        </Link>
       </div>
-    </div>
+    </section>
   );
 }
