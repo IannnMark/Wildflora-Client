@@ -14,7 +14,7 @@ export default function AboutSection() {
           width={1328}
           height={715}
           sizes="(min-width: 1024px) 1328px, (min-width: 768px) 688px, 295px"
-          className="h-[639px] w-[295px] rounded-[10px] object-cover md:h-[779px] md:w-[688px] lg:h-[715px] lg:w-[1328px]"
+          className="h-[639px] w-[295px] rounded-[10px] object-cover md:h-[779px] md:w-[688px] lg:h-[715px] lg:w-[1328px] xl:h-[750px] xl:w-[1440px] 2xl:h-[900px] 2xl:w-[1800px]"
           quality={90}
         />
       </div>
