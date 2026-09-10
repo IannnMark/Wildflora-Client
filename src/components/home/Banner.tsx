@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
+import { useGsapReveal } from "@/hooks/useGsapReveal";
 
 export default function Banner() {
+  const contentRef = useGsapReveal<HTMLDivElement>({
+    scroll: false,
+    selector: "[data-animate]",
+    y: 28,
+    delay: 0.15,
+    stagger: 0.15,
+  });
+
   return (
     <div className="relative overflow-hidden">
       <Image
@@ -13,16 +23,28 @@ export default function Banner() {
         quality={100}
         priority
       />
-      <div className="absolute inset-0 items-center text-center justify-center py-56">
-        <h1 className="text-white text-[32px] md:text-[64px] font-gabriela font-normal">
+      <div
+        ref={contentRef}
+        className="absolute inset-0 items-center text-center justify-center py-56"
+      >
+        <h1
+          data-animate
+          className="text-white text-[32px] md:text-[64px] font-gabriela font-normal"
+        >
           A Home for <br className="block md:hidden" /> Plant Lovers
         </h1>
-        <p className="text-white text-base md:text-[20px] font-satoshi font-normal">
+        <p
+          data-animate
+          className="text-white text-base md:text-[20px] font-satoshi font-normal"
+        >
           Learn, share, and connect with a <br className="block sm:hidden" />{" "}
           community that <br className="hidden md:block lg:hidden" /> cares
           about plants as <br className="block sm:hidden" /> much as you do.
         </p>
-        <div className="flex flex-col md:flex-row gap-3 items-center justify-center font-gabriela font-normal mt-5">
+        <div
+          data-animate
+          className="flex flex-col md:flex-row gap-3 items-center justify-center font-gabriela font-normal mt-5"
+        >
           <button className="rounded-full w-[203px] md:w-[186px] h-[47px] border-[#FEFCEB] text-white border-2 hover:text-black hover:bg-white hover:scale-105 transition-all duration-300 text-base">
             View Plant Guides
           </button>
