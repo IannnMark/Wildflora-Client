@@ -1,13 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useGsapReveal } from "@/hooks/useGsapReveal";
 
 export default function AboutSection() {
+  const imageRef = useGsapReveal<HTMLDivElement>({ y: 16, duration: 1 });
+  const cardRef = useGsapReveal<HTMLDivElement>({
+    y: 40,
+    delay: 0.15,
+    start: "top 90%",
+  });
+
   return (
     <section
       aria-labelledby="about-heading"
       className="relative mt-10 flex items-center justify-center"
     >
-      <div className="px-4 py-6 md:p-6 lg:p-10">
+      <div ref={imageRef} className="px-4 py-6 md:p-6 lg:p-10">
         <Image
           src="/images/AboutSection.png"
           alt=""
@@ -19,7 +29,10 @@ export default function AboutSection() {
         />
       </div>
 
-      <div className="absolute bottom-12 flex h-[354px] w-[263px] flex-col justify-center rounded-xl bg-cream pl-8 md:h-[310px] md:w-[640px] md:pl-10 lg:bottom-20 lg:left-28 lg:h-[637px] lg:w-[552px]">
+      <div
+        ref={cardRef}
+        className="absolute bottom-12 flex h-[354px] w-[263px] flex-col justify-center rounded-xl bg-cream pl-8 md:h-[310px] md:w-[640px] md:pl-10 lg:bottom-20 lg:left-28 lg:h-[637px] lg:w-[552px]"
+      >
         <h2
           id="about-heading"
           className="font-gabriela text-[32px] font-normal leading-[1.1] text-black md:text-[48px]"
