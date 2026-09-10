@@ -13,14 +13,13 @@ export default function Banner() {
   });
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden w-full h-[689px]">
       <Image
         src={"/images/hero-bg.png"}
         alt="Homepage banner"
-        width={1920}
-        height={689}
-        className="w-full h-[689px] object-cover"
-        quality={100}
+        fill
+        sizes="100vw"
+        className="object-cover"
         priority
       />
       <div

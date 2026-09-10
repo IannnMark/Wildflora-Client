@@ -92,7 +92,6 @@ export default function JournalSection() {
                       fill
                       sizes="(min-width: 768px) 640px, 100vw"
                       className="object-cover"
-                      quality={90}
                     />
                   </div>
 
