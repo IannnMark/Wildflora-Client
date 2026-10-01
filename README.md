@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wildflora
+
+A home for plant lovers — a Next.js marketing site where people can learn plant care, browse a growing plant library, and read the Wildflora journal.
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- [React 19](https://react.dev) + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [GSAP](https://gsap.com) for scroll-triggered reveal animations
+- [Embla Carousel](https://www.embla-carousel.com) for the journal carousel
+- [lucide-react](https://lucide.dev) for icons
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and start the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site. The homepage lives at [src/app/page.tsx](src/app/page.tsx) and auto-updates as you edit.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server with Turbopack |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/                 App Router pages, layout, and global styles
+    data/              Static content (journal entries, plant library)
+  components/
+    home/              Homepage sections (Banner, About, Journal, Library)
+    layout/             Header and Footer
+  hooks/               Shared hooks (useGsapReveal for scroll animations)
+  lib/                 Shared utilities (cn class-name helper)
+  fonts/               Local Satoshi font files
+public/
+  images/              Static image assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Import paths use the `@/*` alias for `src/*` (see [tsconfig.json](tsconfig.json)).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fonts
 
-## Deploy on Vercel
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to load Geist and Gabriela (Google Fonts), plus a locally hosted Satoshi family.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy is with the [Vercel Platform](https://vercel.com/new). See the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for other options.
