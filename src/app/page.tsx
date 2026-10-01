@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import AboutSection from "@/components/home/AboutSection";
 import JournalSection from "@/components/home/JournalSection";
+import LibrarySection from "@/components/home/LibrarySection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <AboutSection />
       <JournalSection />
+      <LibrarySection />
     </div>
   );
 }
