@@ -24,12 +24,12 @@ Open [http://localhost:3000](http://localhost:3000) to see the site. The homepag
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the dev server with Turbopack |
-| `npm run build` | Create a production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint |
+| Command         | Description                         |
+| --------------- | ----------------------------------- |
+| `npm run dev`   | Start the dev server with Turbopack |
+| `npm run build` | Create a production build           |
+| `npm run start` | Serve the production build          |
+| `npm run lint`  | Run ESLint                          |
 
 ## Project Structure
 
@@ -38,7 +38,7 @@ src/
   app/                 App Router pages, layout, and global styles
     data/              Static content (journal entries, plant library)
   components/
-    home/              Homepage sections (Banner, About, Journal, Library)
+    home/              Homepage sections (Banner, About, Journal, Library, Community)
     layout/             Header and Footer
   hooks/               Shared hooks (useGsapReveal for scroll animations)
   lib/                 Shared utilities (cn class-name helper)
