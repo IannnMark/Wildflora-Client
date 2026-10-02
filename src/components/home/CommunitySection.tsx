@@ -93,7 +93,7 @@ export default function CommunitySection() {
             leafy plants?
           </p>
 
-          <div className="relative mt-8 h-[200px] w-full overflow-hidden rounded-[10px] bg-gradient-to-br from-[#8FA06A] via-[#5E7A4A] to-[#3C4527] md:h-[408px]">
+          <div className="relative mt-2 md:mt-6 h-[200px] w-full overflow-hidden rounded-[10px] bg-gradient-to-br from-[#8FA06A] via-[#5E7A4A] to-[#3C4527] md:h-[408px]">
             <Image
               src={"/images/community/cactus.png"}
               alt="Cactus"
@@ -103,7 +103,7 @@ export default function CommunitySection() {
             />
           </div>
 
-          <div className="mt-4 flex items-center gap-5">
+          <div className="mt-1 md:mt-4 flex items-center gap-5">
             <span className="flex items-center gap-1.5 font-satoshi text-[14px] text-black/70">
               <Heart className="h-4 w-4" />
               128 Likes
