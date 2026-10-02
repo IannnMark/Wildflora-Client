@@ -19,7 +19,7 @@ export default function CommunitySection() {
     <section className="w-full bg-[#3C4527]">
       <div
         ref={contentRef}
-        className="mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-10 py-20 md:py-28 lg:flex-row lg:items-center lg:justify-between lg:gap-16"
+        className="mx-auto flex w-full max-w-[1440px] h-[976px] md:h-[1235px] lg:h-[924px] flex-col gap-12 px-10 py-20 md:py-28 lg:flex-row lg:items-center lg:justify-between lg:gap-16"
       >
         <div data-animate className="max-w-[520px]">
           <h2 className="font-gabriela text-[32px] font-normal leading-[1.15] text-white md:text-[48px]">
@@ -58,7 +58,7 @@ export default function CommunitySection() {
 
         <div
           data-animate
-          className="w-full rounded-2xl bg-cream p-6 shadow-xl md:p-8 lg:w-[640px]"
+          className="w-full rounded-2xl bg-cream p-6 shadow-xl md:p-8 lg:w-[656px] md:h-[700px] md:w-[688px] w-[295px] h-[504px]"
         >
           <div className="flex flex-col md:flex-row items-start justify-between gap-3">
             <div className="flex items-center gap-3">
@@ -93,12 +93,13 @@ export default function CommunitySection() {
             leafy plants?
           </p>
 
-          <div className="relative mt-4 flex h-[260px] w-full items-center justify-center overflow-hidden rounded-[10px] bg-gradient-to-br from-[#8FA06A] via-[#5E7A4A] to-[#3C4527] md:h-[340px]">
+          <div className="relative mt-8 h-[200px] w-full overflow-hidden rounded-[10px] bg-gradient-to-br from-[#8FA06A] via-[#5E7A4A] to-[#3C4527] md:h-[408px]">
             <Image
               src={"/images/community/cactus.png"}
               alt="Cactus"
-              width={576}
-              height={408}
+              fill
+              sizes="(min-width: 1024px) 592px, (min-width: 768px) 624px, 247px"
+              className="object-cover"
             />
           </div>
 
