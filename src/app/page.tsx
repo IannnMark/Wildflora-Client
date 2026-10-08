@@ -3,6 +3,7 @@ import AboutSection from "@/components/home/AboutSection";
 import JournalSection from "@/components/home/JournalSection";
 import LibrarySection from "@/components/home/LibrarySection";
 import CommunitySection from "@/components/home/CommunitySection";
+import PlantOfTheWeek from "@/components/home/PlantOfTheWeek";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <JournalSection />
       <LibrarySection />
       <CommunitySection />
+      <PlantOfTheWeek />
     </div>
   );
 }
