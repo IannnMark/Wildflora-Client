@@ -4,6 +4,7 @@ import JournalSection from "@/components/home/JournalSection";
 import LibrarySection from "@/components/home/LibrarySection";
 import CommunitySection from "@/components/home/CommunitySection";
 import PlantOfTheWeek from "@/components/home/PlantOfTheWeek";
+import NewsLetter from "@/components/home/NewsLetter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <LibrarySection />
       <CommunitySection />
       <PlantOfTheWeek />
+      <NewsLetter />
     </div>
   );
 }
