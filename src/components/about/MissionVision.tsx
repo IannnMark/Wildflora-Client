@@ -29,7 +29,7 @@ export default function MissionVision() {
 
         <div className="relative aspect-616/605 w-full shrink-0 overflow-hidden rounded-xl lg:w-[616px]">
           <Image
-            src="/images/mission.jpeg"
+            src="/images/about/mission.jpeg"
             alt="A plant lover tending to a bonsai at home"
             fill
             sizes="(min-width: 1024px) 616px, 100vw"
