@@ -1,3 +1,4 @@
+import NewsLetter from "../home/NewsLetter";
 import AboutStory from "./AboutStory";
 import AboutValues from "./AboutValues";
 import Banner from "./Banner";
@@ -10,6 +11,7 @@ export default function About() {
       <AboutStory />
       <MissionVision />
       <AboutValues />
+      <NewsLetter />
     </div>
   );
 }
