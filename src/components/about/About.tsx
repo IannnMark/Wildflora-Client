@@ -1,4 +1,5 @@
 import AboutStory from "./AboutStory";
+import AboutValues from "./AboutValues";
 import Banner from "./Banner";
 import MissionVision from "./MissionVision";
 
@@ -8,6 +9,7 @@ export default function About() {
       <Banner />
       <AboutStory />
       <MissionVision />
+      <AboutValues />
     </div>
   );
 }
