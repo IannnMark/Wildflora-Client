@@ -16,6 +16,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Journal", href: "/journal" },
+    { name: "Plant Library", href: "/library" },
     { name: "Community", href: "/community" },
     { name: "Contact", href: "/contact" },
   ];
