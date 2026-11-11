@@ -15,7 +15,7 @@ export default function Banner() {
       <div className="absolute inset-0 bg-black/45" />
 
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-white font-normal font-gabriela leading-[120%] text-[64px]">
+        <h1 className="text-white font-normal font-gabriela leading-[120%] text-[32px] md:text-[64px]">
           The Wildflora Journal
         </h1>
       </div>
